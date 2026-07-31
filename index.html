@@ -1214,7 +1214,7 @@ const SITE_CONTENT = {
          author: "Ananya Naidu",
          meta: "August 2026",
          excerpt: "Parthenium hysterophorus rode into India hidden in 1950s food aid — and has been poisoning soil, crops, and livestock, and displacing native biodiversity, ever since.",
-         cover: "parthenium-cover.jpg",
+         cover:"images/articles/parthenium-cover.jpg",
          content: `Imagine a hillside, sprinkled with plants dotted with luxuriantly growing white flowers, exuding a sense of purity. The sun is shining, the wind is blowing gently, the air is crisp. You've lived beside this hill your whole life, and nothing can beat a calming view like this.
 
   But underneath the apparent perfection, behind the illusion of pristineness lies a horrifying and bitter truth: none of the white flowers belong there. Did you notice? Where is the lush grass you used to lay on in the evenings? Where are the bees that used to hover over the passionflower vines? They can barely be seen- not on that hill, not around the valley. Slowly, you realise these new white flowers are an infestation. They're tenacious invaders releasing toxins in the earth and poisoning insects that have evolved right there around that hill for a long, long time before these newcomers invaded their lands.
@@ -1495,6 +1495,71 @@ SITE_CONTENT.faq.forEach((item, i) => {
   });
   faqList.appendChild(wrap);
 });
+function openArticle(id){
+
+const article =
+SITE_CONTENT.work.articles.new.find(a=>a.id===id);
+
+if(!article){
+alert("Article not found.");
+return;
+}
+
+document.body.innerHTML = `
+
+<div style="
+max-width:900px;
+margin:auto;
+padding:60px;
+font-family:Georgia,serif;
+line-height:1.8;
+">
+
+<button
+onclick="location.reload()"
+style="
+padding:12px 20px;
+margin-bottom:40px;
+">
+
+← Back
+
+</button>
+
+<img
+src="${article.cover}"
+style="
+width:100%;
+border-radius:12px;
+margin-bottom:35px;
+">
+
+<h1>${article.title}</h1>
+
+<p>
+
+<strong>${article.author}</strong>
+
+<br>
+
+${article.meta}
+
+</p>
+
+${article.content}
+
+</div>
+
+`;
+
+history.pushState(
+{},
+"",
+"#article/"+id
+);
+
+}
+}
 </script>
 </body>
 </html>
