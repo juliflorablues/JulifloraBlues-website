@@ -1531,8 +1531,14 @@ history.pushState(
 "#article/"+id
 );
 
-document.getElementById("article-content").innerHTML = `
+const articleContainer = document.getElementById("article-content");
 
+if (!articleContainer) {
+    alert("article-content was not found!");
+    return;
+}
+
+articleContainer.innerHTML =
 <img
 src="${article.cover}"
 style="
