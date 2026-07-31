@@ -1188,26 +1188,6 @@
     </div>
   </div>
 </footer>
- <!-- ARTICLE VIEWER -->
-
-<section id="article-view"
-style="display:none;padding:60px 20px;min-height:100vh;background:#fff;">
-
-<div style="max-width:900px;margin:auto;">
-
-<button
-class="go"
-onclick="closeArticle()">
-
-← Back to Articles
-
-</button>
-
-<div id="article-content"></div>
-
-</div>
-
-</section>
 
 <script>
 /* ================================================================
@@ -1229,12 +1209,11 @@ const SITE_CONTENT = {
       // Newest pieces — add new entries to the top of this list
       new: [
         {
-         id: "parthenium",
          title: "The silent intrusion: How Parthenium has taken over India",
          author: "Ananya Naidu",
          meta: "August 2026",
          excerpt: "Parthenium hysterophorus rode into India hidden in 1950s food aid — and has been poisoning soil, crops, and livestock, and displacing native biodiversity, ever since.",
-         cover:"images/articles/parthenium-cover.jpg",
+         cover: "parthenium-cover.jpg",
          content: `Imagine a hillside, sprinkled with plants dotted with luxuriantly growing white flowers, exuding a sense of purity. The sun is shining, the wind is blowing gently, the air is crisp. You've lived beside this hill your whole life, and nothing can beat a calming view like this.
 
   But underneath the apparent perfection, behind the illusion of pristineness lies a horrifying and bitter truth: none of the white flowers belong there. Did you notice? Where is the lush grass you used to lay on in the evenings? Where are the bees that used to hover over the passionflower vines? They can barely be seen- not on that hill, not around the valley. Slowly, you realise these new white flowers are an infestation. They're tenacious invaders releasing toxins in the earth and poisoning insects that have evolved right there around that hill for a long, long time before these newcomers invaded their lands.
@@ -1444,8 +1423,7 @@ workMeta.forEach((m, i) => {
             <h4>${a.title}</h4>
             ${a.author ? `<span class="byline">By ${a.author}</span>` : ''}
             ${a.meta ? `<span class="byline">${a.meta}</span>` : ''}
-            <button class="go"
-onclick="openArticle('${a.id}')"> Read </button>
+            <a class="go" href="${a.link || '#'}" target="_blank" rel="noopener">Read</a>
           </div>`).join('') + '</div>';
     bodyHtml += `
       <div class="article-block">
@@ -1515,81 +1493,6 @@ SITE_CONTENT.faq.forEach((item, i) => {
     if (!isOpen) { wrap.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
   });
   faqList.appendChild(wrap);
-});
-function openArticle(id){
-
-const article =
-SITE_CONTENT.work.articles.new.find(
-a => a.id === id
-);
-
-if(!article) return;
-
-history.pushState(
-{},
-"",
-"#article/"+id
-);
-document.getElementById("article-content").innerHTML =
-<img
-src="${article.cover}"
-style="
-width:100%;
-border-radius:12px;
-margin-bottom:25px;
-">
-
-<h1>${article.title}</h1>
-
-<p>
-
-<strong>${article.author}</strong>
-
-•
-
-${article.meta}
-
-</p>
-
-<div>
-
-${article.content}
-
-</div>
-
-`;
-
-document.getElementById("work").style.display="none";
-
-document.getElementById("article-view").style.display="block";
-
-}
-
-function closeArticle(){
-
-history.pushState(
-{},
-"",
-"#"
-);
-
-document.getElementById("article-view").style.display="none";
-
-document.getElementById("work").style.display="";
-
-}
- window.addEventListener("load",()=>{
-
-const hash=window.location.hash;
-
-if(hash.startsWith("#article/")){
-
-const id=hash.replace("#article/","");
-
-openArticle(id);
-
-}
-
 });
 </script>
 </body>
