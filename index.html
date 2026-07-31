@@ -1424,7 +1424,8 @@ workMeta.forEach((m, i) => {
             <h4>${a.title}</h4>
             ${a.author ? `<span class="byline">By ${a.author}</span>` : ''}
             ${a.meta ? `<span class="byline">${a.meta}</span>` : ''}
-            <button class="go" onclick="openArticle('${a.id}')"> Read → </button>
+            <button class="go"
+onclick="openArticle('${a.id}')"> Read </button>
           </div>`).join('') + '</div>';
     bodyHtml += `
       <div class="article-block">
