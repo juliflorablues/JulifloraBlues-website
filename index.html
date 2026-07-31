@@ -1209,6 +1209,7 @@ const SITE_CONTENT = {
       // Newest pieces — add new entries to the top of this list
       new: [
         {
+         id: "parthenium",
          title: "The silent intrusion: How Parthenium has taken over India",
          author: "Ananya Naidu",
          meta: "August 2026",
@@ -1423,7 +1424,7 @@ workMeta.forEach((m, i) => {
             <h4>${a.title}</h4>
             ${a.author ? `<span class="byline">By ${a.author}</span>` : ''}
             ${a.meta ? `<span class="byline">${a.meta}</span>` : ''}
-            <a class="go" href="${a.link || '#'}" target="_blank" rel="noopener">Read</a>
+            <button class="go" onclick="openArticle('${a.id}')"> Read → </button>
           </div>`).join('') + '</div>';
     bodyHtml += `
       <div class="article-block">
