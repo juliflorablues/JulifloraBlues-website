@@ -1498,40 +1498,26 @@ SITE_CONTENT.faq.forEach((item, i) => {
 function openArticle(id){
 
 const article =
-SITE_CONTENT.work.articles.new.find(a=>a.id===id);
+SITE_CONTENT.work.articles.new.find(
+a => a.id === id
+);
 
-if(!article){
-alert("Article not found.");
-return;
-}
+if(!article) return;
 
-document.body.innerHTML = `
+history.pushState(
+{},
+"",
+"#article/"+id
+);
 
-<div style="
-max-width:900px;
-margin:auto;
-padding:60px;
-font-family:Georgia,serif;
-line-height:1.8;
-">
-
-<button
-onclick="location.reload()"
-style="
-padding:12px 20px;
-margin-bottom:40px;
-">
-
-← Back
-
-</button>
+document.getElementById("article-content").innerHTML = `
 
 <img
 src="${article.cover}"
 style="
 width:100%;
 border-radius:12px;
-margin-bottom:35px;
+margin-bottom:25px;
 ">
 
 <h1>${article.title}</h1>
@@ -1540,11 +1526,13 @@ margin-bottom:35px;
 
 <strong>${article.author}</strong>
 
-<br>
+•
 
 ${article.meta}
 
 </p>
+
+<div>
 
 ${article.content}
 
@@ -1552,14 +1540,38 @@ ${article.content}
 
 `;
 
+document.getElementById("work").style.display="none";
+
+document.getElementById("article-view").style.display="block";
+
+}
+
+function closeArticle(){
+
 history.pushState(
 {},
 "",
-"#article/"+id
+"#"
 );
 
+document.getElementById("article-view").style.display="none";
+
+document.getElementById("work").style.display="";
+
 }
+ window.addEventListener("load",()=>{
+
+const hash=window.location.hash;
+
+if(hash.startsWith("#article/")){
+
+const id=hash.replace("#article/","");
+
+openArticle(id);
+
 }
+
+});
 </script>
 </body>
 </html>
