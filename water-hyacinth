@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Hyacinth: The Water Foe — Juliflora Blues</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#2D6A4F; --teal:#2A6F97; --teal-deep:#204f6d; --coral:#C46A3C;
+    --amber:#D4A017; --paper:#FAF9F6; --ink:#1E1E1E; --warmgray:#495057;
+    --line:rgba(30,30,30,0.13);
+    --font-display:'Fraunces', serif; --font-body:'Work Sans', sans-serif;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family:var(--font-body); color:var(--ink); background:var(--paper);
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:720px; margin:0 auto; padding:0 1.5rem; }
+
+  nav{
+    padding:1.2rem 1.5rem; display:flex; align-items:center; justify-content:space-between;
+    border-bottom:1px solid var(--line);
+  }
+  nav .brand{ display:flex; align-items:center; gap:0.6rem; font-family:var(--font-display); font-size:1.05rem; color:var(--forest); }
+  nav .brand img{ width:32px; height:32px; border-radius:50%; }
+  nav a.back{ font-size:0.82rem; font-weight:600; color:var(--warmgray); }
+  nav a.back:hover{ color:var(--forest); }
+
+  main{ padding:3rem 0 5rem; }
+  .eyebrow{
+    font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:700;
+    color:var(--coral); margin-bottom:1rem;
+  }
+  h1{
+    font-family:var(--font-display); font-weight:500; font-size:clamp(1.7rem,4.5vw,2.5rem);
+    color:var(--forest); line-height:1.15; margin-bottom:1rem;
+  }
+  .byline{ font-size:0.88rem; color:var(--warmgray); margin-bottom:2.2rem; }
+
+  .cover{ width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:4px; margin-bottom:2.2rem; display:block; }
+
+  .body p{ margin-bottom:1.25rem; color:var(--ink); opacity:0.9; }
+
+  /* Comments section */
+  .comments-block{ margin-top:3.5rem; padding-top:2.5rem; border-top:1px solid var(--line); }
+  .comments-block .eyebrow{ margin-bottom:0.6rem; }
+  .comments-block h2{
+    font-family:var(--font-display); font-weight:500; font-size:1.4rem;
+    color:var(--forest); margin-bottom:1.5rem;
+  }
+
+  footer{
+    margin-top:4rem; padding-top:2rem; border-top:1px solid var(--line);
+    font-size:0.8rem; color:var(--warmgray); text-align:center;
+  }
+  footer a{ font-weight:600; color:var(--teal-deep); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">
+    <span>Juliflora Blues</span>
+  </a>
+  <a href="index.html#work" class="back">← Back to Articles</a>
+</nav>
+
+<main class="wrap">
+  <div class="eyebrow">Articles &amp; Blogs</div>
+  <h1>The silent intrusion: How Parthenium has taken over India</h1>
+  <div class="byline">By Kavya Dhimmar · August 2026</div>
+
+  <img class="cover" src="Eichhornia_crassipes_C.jpg" alt="Water Hyacinth">
+
+  <div class="body">
+    <p>Imagine you're in a houseboat on a lake. You open the window and the evening sunlight warms your face while the breeze is blowing gently. Then you glance down at the water, but the only thing you see is a field of flowers, water hyacinths. While they look pretty with their flower petals ranging from lavender to pink shades, you can't see the water below. Wouldn't this stay on a boat be better if the lake had lotuses and water lilies on the surface with lily pads around but in an ample amount where you could still see the water body?</p>
+    <p>The flowers which covered the entire lake are water hyacinths (Pontederia crassipes also known as Eichhornia crassipes (Mart.) Solms). It is a native plant of South America. While the flowers look pretty, this plant is a menace and even nicknamed the ‘Terror of Bengal’. It has broad, thick, glossy leaves. Buoyant bulb-like nodules at the base help the stems float above the surface of the water. They have long spongy bulbous stalks. The purple-black roots are feathery and free hanging. The flower consists of six petals which vary in colour from lavender to pink.</p>
+    <p>Water hyacinths grow and reproduce very quickly. It can reproduce sexually and by fragmentation. Each plant can produce 1000 seeds per year which remain viable for 28 years. The plant forms dense mats of vegetation and can cover entire lakes and ponds. The mats formed are so thick that they can even support humans walking on it. It easily coexists with other invasive plants and native plants. They outcompete both submerged and floating native plants. They inhibit the growth of phytoplankton, submerged plants and algae by affecting their photosynthesis processes. They even kill fish due to depletion of dissolved oxygen.</p>
+    <p>Water hyacinths absorb large amounts of heavy metals. It sinks and rots at the bottom of the water body after it dies causing secondary water pollution. Water hyacinth mats are often a breeding place for disease vectors such as mosquitoes and snails and harmful pathogens. However, water hyacinths can act as a food source for goldfishes, keep water clean and help with oxygenation. The plants also have high evaporatranspiration which causes small covered lakes to dry out. The dense mats also prevent waterway transportation as well as fishing possibilities.</p>
+    <p>The removal of the hyacinths requires a large sum of money. Harvesting the water hyacinths requires considerable effort but as the plant reproduces quickly, it is an excellent source of biomass. One hectare of standing crop produces more than seventy thousand cubic metres of biomass. Bengali farmers use the dry water hyacinths as fuel and the ashes are used as fertilisers. It can also be used in waste water treatment, especially dairy waste water. The plant can be used in weaving handbags, baskets, ropes etc. The plant is also substituted as a carotene rich vegetable and its young leaves and flowers are added in salads.</p>
+    <p>In Bangladesh, farmers cultivate vegetables on ‘floating gardens’ with a bamboo frame base, with dried water hyacinths covered in soil as bedding. This method is known as dhap chash and vasoman chash. This is done because large portions of land goes underwater for months during the monsoon seasons. The plant has potential for producing bioenergy. In Kenya, biodegradable plastics made from water hyacinths are commercialised. It even has the potential to make strong and tough paper.</p>
+  
+</div>
+
+  <!-- Comments — powered by Disqus. Set juliflora-blues once below;
+       it then works automatically on every article page, since each page's
+       own URL keeps its comments separate. -->
+  <div class="comments-block">
+    <div class="eyebrow">Join the Conversation</div>
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script>
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://juliflora-blues.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+  <footer>
+    Published by <a href="index.html">Juliflora Blues</a>
+  </footer>
+</main>
+
+</body>
+</html>
